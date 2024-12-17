@@ -27,3 +27,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 . "$HOME/.cargo/env"
+
+eval "$(thefuck --alias)"
+
+export EDITOR=nano
