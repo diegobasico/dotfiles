@@ -8,6 +8,8 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias tree='tree --gitignore'
+alias clip='xclip -sel clipboard'
+
 
 PS1='\[\e[1;91m\]\u\[\e[1;36m\]@\h\[\e[00m\]\[\e[1;91m\][\[\e[00m\]\W\[\e[1;91m\]]\$ \[\e[0m\]'
 
