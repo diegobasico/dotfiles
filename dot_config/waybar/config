@@ -33,7 +33,7 @@
     //  "custom/keyboard-layout",
         "battery",
     //  "tray",
-        "clock#date",
+    //  "clock#date",
         "clock#time"
     ],
 
