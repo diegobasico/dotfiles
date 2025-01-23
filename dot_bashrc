@@ -12,7 +12,8 @@ alias xclip='xclip -sel clipboard'
 alias venv='source .venv/bin/activate'
 
 
-PS1='\[\e[1;91m\]\u\[\e[1;36m\]@\h\[\e[00m\]\[\e[1;91m\][\[\e[00m\]\W\[\e[1;91m\]]\$ \[\e[0m\]'
+# PS1='\[\e[1;35m\]\u\[\e[1;36m\]@\h\[\e[00m\]\[\e[1;91m\][\[\e[00m\]\W\[\e[1;91m\]]\$ \[\e[0m\]'
+PS1='\[\e[0m\]\u\[\e[38;2;93;63;211m\]@\h\[\e[00m\]\[\e[38;2;93;63;211m\][\[\e[0m\]\W\[\e[38;2;93;63;211m\]]\$ \[\e[0m\]'
 
 fastfetch || true
 
