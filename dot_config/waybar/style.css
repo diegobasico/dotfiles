@@ -12,23 +12,21 @@
 
 @keyframes blink-warning {
     70% {
-        color: white;
+        color: orange;
     }
 
     to {
-        color: white;
-        background-color: yellow;
+        color: transparent;
     }
 }
 
 @keyframes blink-critical {
     70% {
-      color: white;
+      color: red;
     }
 
     to {
-        color: white;
-        background-color: red;
+        color: transparent;
     }
 }
 
@@ -50,7 +48,7 @@
 #waybar {
     background: rgba(0, 0, 0, 0.65);
     color: white;
-    font-family: Cantarell, Noto Sans, sans-serif;
+    font-family: "Fira Code", monospace;
     font-size: 13px;
 }
 
@@ -81,16 +79,18 @@
 }
 
 #battery.warning {
+    background-color: transparent;
     color: orange;
 }
 
 #battery.critical {
+    background-color: transparent;
     color: red;
 }
 
 #battery.warning.discharging {
     animation-name: blink-warning;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }
 
 #battery.critical.discharging {
@@ -179,7 +179,6 @@
     padding-bottom: 2px;
     padding-left: 10px;
     padding-right: 10px;
-    color: #888888;
 }
 
 #workspaces button.focused {
@@ -189,6 +188,6 @@
 }
 
 #workspaces button.urgent {
-    border-color: #c9545d;
-    color: #c9545d;
+    border-color: #5a4fcf;
+    color: #5a4fcf;
 }

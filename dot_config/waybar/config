@@ -45,11 +45,11 @@
     "battery": {
         "interval": 10,
         "states": {
-            "warning": 30,
-            "critical": 15
+            "warning": 20,
+            "critical": 10
         },
         // Connected to AC
-        "format": "  {icon}  {capacity}%", // Icon: bolt
+        "format": "  {icon} {capacity}%", // Icon: bolt
         // Not connected to AC
         "format-discharging": "{icon}  {capacity}%",
         "format-icons": [
@@ -64,7 +64,7 @@
 
     "clock#time": {
         "interval": 1,
-        "format": "{:%H:%M:%S}",
+        "format": "{:%H:%M}",
         "tooltip-format": "{:%e %B %Y}"
     },
 
@@ -104,10 +104,10 @@
 
     "network": {
         "interval": 5,
-        //    "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
-        "format-wifi": "  {signalStrength}%", // Icon: wifi
-        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
-        "format-disconnected": "⚠  Disconnected",
+        //    "format-wifi": " {essid} ({signalStrength}%)", // Icon: wifi
+        "format-wifi": " {signalStrength}%", // Icon: wifi
+        "format-ethernet": " {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+        "format-disconnected": "⚠ Disconnected",
         "tooltip-format": "{essid}: {ipaddr}"
     },
 
