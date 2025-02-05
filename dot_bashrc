@@ -14,7 +14,7 @@ alias venv='source .venv/bin/activate'
 
 PS1='\[\e[0m\]\u\[\e[38;2;93;63;211m\]@\h\[\e[00m\]\[\e[38;2;93;63;211m\][\[\e[0m\]\W\[\e[38;2;93;63;211m\]]\$ \[\e[0m\]'
 
-fastfetch || true
+grep -v '^#' .config/fastfetch/pokeget.txt | shuf -n 1 | xargs pokeget --hide-name | fastfetch --file-raw - || true
 
 . "$HOME/.cargo/env"
 
