@@ -4,14 +4,15 @@ window {
     padding: 15px;
     border-radius: 8px;
     color: #FFFFFF;
-    font-family: "Fira Code", monospace;
+    font-family: "FiraCode Nerd Font", monospace;
     font-size: 14px;
 }
 
 entry {
     background-color: rgba(255, 255, 255, 0);
     padding: 10px;
-    font-family: "Fira Code", monospace;
+    color: #FFFFFF;
+    font-family: "FiraCode Nerd Font", monospace;
     font-size: 14px;
 }
 
