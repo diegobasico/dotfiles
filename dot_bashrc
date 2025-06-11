@@ -19,22 +19,6 @@ alias venv='source .venv/bin/activate'
 
 PS1='\[\e[0m\]\u\[\e[38;2;93;63;211m\]@\h\[\e[00m\]\[\e[38;2;93;63;211m\][\[\e[0m\]\W\[\e[38;2;93;63;211m\]]\$ \[\e[0m\]'
 
-### FASTFETCH & POKEGET ###
-
-if command -v fastfetch &> /dev/null; then
-    if command -v pokeget &> /dev/null; then
-        grep -v '^#' ~/.config/fastfetch/pokeget.txt | shuf -n 1 | xargs pokeget --hide-name | fastfetch --file-raw - || true
-    else
-        fastfetch || true
-    fi
-fi
-
-### THE FUCK ###
-
-if command -v thefuck &> /dev/null; then
-    eval "$(thefuck --alias)"
-fi
-
 ### RUST AND UV ###
 
 . "$HOME/.cargo/env"
@@ -43,8 +27,8 @@ fi
 ### ENVIRONMENT VARIABLES ###
 
 export LS_COLORS="di=01;36:fi=0:ln=01;36:pi=33:so=01;35:bd=01;33:cd=01;33:or=01;31:mi=01;31:ex=01;32:ow=0:tw=0"
-export EDITOR=nano
-export ELECTRON_OZONE_PLATFORM_HINT=auto
+export EDITOR=nvim
+export ELECTRON_OZONE_PLATFORM_HINT=auto # for electron in wayland
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
