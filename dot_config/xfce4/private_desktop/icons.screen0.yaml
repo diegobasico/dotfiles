@@ -18,3 +18,11 @@ configs:
     "/home/diego":
       row: 1
       col: 0
+    "/home/diego/AUR/ttf-ms-win11-auto/src/mnt/http":
+      row: 2
+      col: 0
+      last_seen: 1748620978075089
+    "/run/media/diego/CENA_X64FREE_EN-US_DV9":
+      row: 3
+      col: 0
+      last_seen: 1748621005302223

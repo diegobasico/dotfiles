@@ -14,31 +14,27 @@ alias xclip='xclip -sel clipboard'
 alias wcopy='wl-copy'
 alias wpaste='wl-paste'
 alias venv='source .venv/bin/activate'
+alias open='xdg-open'
 
 ### BASH PROMPT ###
 
 PS1='\[\e[0m\]\u\[\e[38;2;93;63;211m\]@\h\[\e[00m\]\[\e[38;2;93;63;211m\][\[\e[0m\]\W\[\e[38;2;93;63;211m\]]\$ \[\e[0m\]'
 
+### THE FUCK ###
+
+if command -v thefuck &>/dev/null; then
+  eval "$(thefuck --alias)"
+fi
+
 ### RUST AND UV ###
 
-. "$HOME/.cargo/env"
 . "$HOME/.local/bin/env"
 
 ### ENVIRONMENT VARIABLES ###
 
 export LS_COLORS="di=01;36:fi=0:ln=01;36:pi=33:so=01;35:bd=01;33:cd=01;33:or=01;31:mi=01;31:ex=01;32:ow=0:tw=0"
 export EDITOR=nvim
-export ELECTRON_OZONE_PLATFORM_HINT=auto # for electron in wayland
+export ELECTRON_OZONE_PLATFORM_HINT=auto
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-### SET UP SSH-AGENT ###
-
-# touch $XDG_RUNTIME_DIR/ssh-agent.env
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
-fi
-if [ ! -f "$SSH_AUTH_SOCK" ]; then
-    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
-fi
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
