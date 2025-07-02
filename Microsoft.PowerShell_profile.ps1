@@ -89,4 +89,7 @@ function Sync-NvimConfig {
 }
 
 Set-Alias nvim-sync Sync-NvimConfig
+
+# cli software
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
+Invoke-Expression (&starship init powershell)
