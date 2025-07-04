@@ -18,7 +18,7 @@ function M.apply(config)
 	config.colors.tab_bar = config.colors.tab_bar or {}
 
 	config.colors.tab_bar.active_tab = {
-		bg_color = "#272E33",
+		bg_color = "#2B353B",
 		fg_color = "#ffffff",
 		intensity = "Bold",
 		underline = "None",
