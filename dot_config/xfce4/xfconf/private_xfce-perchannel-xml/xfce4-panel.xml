@@ -73,10 +73,11 @@
     <property name="plugin-15" type="string" value="xfce4-mount-plugin"/>
     <property name="plugin-16" type="string" value="whiskermenu">
       <property name="recent" type="array">
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="xfce4-terminal.desktop"/>
         <value type="string" value="org.wezfurlong.wezterm.desktop"/>
         <value type="string" value="xfce-wm-settings.desktop"/>
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="libreoffice-math.desktop"/>
       </property>
     </property>
