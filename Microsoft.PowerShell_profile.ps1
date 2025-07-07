@@ -12,6 +12,7 @@ if (Test-Path($ChocolateyProfile)) {
 
 Set-Alias -name 'npp' -value 'C:\Program Files\Notepad++\notepad++.exe'
 Set-Alias -name 'venv' -value '.venv\Scripts\activate'
+Set-Alias open Start-Process
 
 # set alias with parameters (has to be a function)
 
