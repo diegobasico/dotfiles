@@ -51,7 +51,7 @@
       <property name="&lt;Alt&gt;&lt;Super&gt;space" type="string" value="xfce4-appfinder"/>
       <property name="Print" type="string" value="playerctl play-pause"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;s" type="string" value="xfce4-screenshooter -rc"/>
-      <property name="&lt;Super&gt;q" type="string" value="wezterm"/>
+      <property name="&lt;Super&gt;q" type="string" value="ghostty"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

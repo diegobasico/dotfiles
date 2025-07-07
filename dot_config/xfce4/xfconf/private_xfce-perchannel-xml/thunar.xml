@@ -8,4 +8,5 @@
   <property name="last-window-width" type="int" value="759"/>
   <property name="last-window-height" type="int" value="480"/>
   <property name="last-window-maximized" type="bool" value="true"/>
+  <property name="last-renamer-dialog-maximized" type="bool" value="true"/>
 </channel>
