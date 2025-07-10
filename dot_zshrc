@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # If not interactive, return
 [[ -o interactive ]] || return
 . "$HOME/.local/bin/env"
@@ -37,3 +38,61 @@ autoload -Uz compinit
 compinit
 fpath+=(/usr/share/zsh/site-functions)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+=======
+# If not interactive, return
+[[ -o interactive ]] || return
+. "$HOME/.local/bin/env"
+
+# Aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias tree='tree --gitignore'
+alias xclip='xclip -sel clipboard'
+alias wcopy='wl-copy'
+alias wpaste='wl-paste'
+alias venv='source .venv/bin/activate'
+alias open='xdg-open'
+
+# Command history
+fzf_history() {
+  local cmd
+  cmd=$(fc -lnr 0 | fzf)
+  [[ -n $cmd ]] && print -z -- "$cmd"
+}
+
+alias history='fzf_history'
+
+# Environment
+export LS_COLORS="di=01;36:fi=0:ln=01;36:pi=33:so=01;35:bd=01;33:cd=01;33:or=01;31:mi=01;31:ex=01;32:ow=0:tw=0"
+export EDITOR=nvim
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+export NVM_DIR="$HOME/.nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+[[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
+
+# Tools (Starship, zoxide, uv)
+eval "$(zoxide init zsh)"
+type starship_zle-keymap-select >/dev/null || \
+  {
+    eval "$(starship init zsh)"
+  }
+
+# Initialize zsh
+autoload -Uz compinit
+compinit
+fpath+=(/usr/share/zsh/site-functions)
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+bindkey -e
+
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_NO_FUNCTIONS
+>>>>>>> refs/remotes/origin/main
