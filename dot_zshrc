@@ -1,6 +1,6 @@
 # If not interactive, return
 [[ -o interactive ]] || return
-[[ -f "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
+. "$HOME/.local/bin/env"
 
 # Aliases
 alias ls='ls --color=auto'
