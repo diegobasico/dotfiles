@@ -12,15 +12,6 @@ alias wpaste='wl-paste'
 alias venv='source .venv/bin/activate'
 alias open='xdg-open'
 
-# Command history
-fzf_history() {
-  local cmd
-  cmd=$(fc -lnr 0 | fzf)
-  [[ -n $cmd ]] && print -z -- "$cmd"
-}
-
-alias history='fzf_history'
-
 # Environment
 export LS_COLORS="di=01;36:fi=0:ln=01;36:pi=33:so=01;35:bd=01;33:cd=01;33:or=01;31:mi=01;31:ex=01;32:ow=0:tw=0"
 export EDITOR=nvim
@@ -41,12 +32,17 @@ autoload -Uz compinit
 compinit
 fpath+=(/usr/share/zsh/site-functions)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-bindkey -e
 
+# Set viins mode
+bindkey -v
+bindkey "^?" backward-delete-char
+bindkey '^[[3~' vi-delete-char
+export KEYTIMEOUT=5
+
+# Set zsh history
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
-
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
@@ -54,3 +50,12 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_NO_FUNCTIONS
+
+# Command history shortcut
+fzf_history() {
+  local cmd
+  cmd=$(fc -lnr 0 | fzf)
+  [[ -n $cmd ]] && print -z -- "$cmd"
+}
+zle -N fzf_history
+bindkey '^R' fzf_history
