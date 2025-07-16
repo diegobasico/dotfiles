@@ -31,7 +31,12 @@ type starship_zle-keymap-select >/dev/null || \
 autoload -Uz compinit
 compinit
 fpath+=(/usr/share/zsh/site-functions)
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 # Set viins mode
 bindkey -v
@@ -57,5 +62,4 @@ fzf_history() {
   cmd=$(fc -lnr 0 | fzf)
   [[ -n $cmd ]] && print -z -- "$cmd"
 }
-zle -N fzf_history
-bindkey '^R' fzf_history
+alias fi='fzf_history'
