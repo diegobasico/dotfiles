@@ -36,6 +36,8 @@ if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 elif [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
   source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+  echo "zsh-syntax-highlighting is missing"
 fi
 
 # Set viins mode
@@ -55,6 +57,7 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_NO_FUNCTIONS
+zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
 
 # Command history shortcut
 fzf_history() {
@@ -62,4 +65,4 @@ fzf_history() {
   cmd=$(fc -lnr 0 | fzf)
   [[ -n $cmd ]] && print -z -- "$cmd"
 }
-alias fi='fzf_history'
+alias hi='fzf_history'
