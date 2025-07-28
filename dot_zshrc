@@ -11,6 +11,7 @@ alias wcopy='wl-copy'
 alias wpaste='wl-paste'
 alias venv='source .venv/bin/activate'
 alias open='xdg-open'
+alias rsync='rsync -avh --info=progress2 --partial'
 
 # Environment
 export LS_COLORS="di=01;36:fi=0:ln=01;36:pi=33:so=01;35:bd=01;33:cd=01;33:or=01;31:mi=01;31:ex=01;32:ow=0:tw=0"
