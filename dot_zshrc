@@ -1,6 +1,6 @@
 # If not interactive, return
 [[ -o interactive ]] || return
-[[ -f "$HOME/.local/bin/env" ]] && source "$HOME/.local/bin/env"
+[[ -f "$HOME/.env"]] && source "$HOME/.env"
 
 # Aliases
 alias ls='ls --color=auto'
@@ -13,20 +13,14 @@ alias venv='source .venv/bin/activate'
 alias open='xdg-open'
 alias rsync='rsync -avh --info=progress2 --partial'
 
-# Environment
-export LS_COLORS="di=01;36:fi=0:ln=01;36:pi=33:so=01;35:bd=01;33:cd=01;33:or=01;31:mi=01;31:ex=01;32:ow=0:tw=0"
-export EDITOR=nvim
-export ELECTRON_OZONE_PLATFORM_HINT=auto
+# Node version manager
 export NVM_DIR="$HOME/.nvm"
 [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 [[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
 
 # Tools (Starship, zoxide, uv)
 eval "$(zoxide init zsh)"
-type starship_zle-keymap-select >/dev/null || \
-  {
-    eval "$(starship init zsh)"
-  }
+eval "$(starship init zsh)"
 
 # Initialize zsh
 autoload -Uz compinit
