@@ -12,7 +12,6 @@ alias wpaste='wl-paste'
 alias venv='source .venv/bin/activate'
 alias open='xdg-open'
 alias rsync='rsync -avh --info=progress2 --partial'
-alias batlog='bat --paging=never -l log'
 
 # Node version manager
 export NVM_DIR="$HOME/.nvm"
@@ -62,3 +61,13 @@ fzf_history() {
   [[ -n $cmd ]] && print -z -- "$cmd"
 }
 alias hi='fzf_history'
+
+# tail -f into bat shortcut
+batlog() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: tlog <file>"
+        return 1
+    fi
+    tail -f "$1" | bat --paging=never -l log
+}
+
