@@ -61,3 +61,13 @@ fzf_history() {
   [[ -n $cmd ]] && print -z -- "$cmd"
 }
 alias hi='fzf_history'
+
+# tail -f into bat shortcut
+batlog() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: tlog <file>"
+        return 1
+    fi
+    tail -f "$1" | bat --paging=never -l log
+}
+
