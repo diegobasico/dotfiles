@@ -12,6 +12,7 @@ alias wpaste='wl-paste'
 alias venv='source .venv/bin/activate'
 alias open='xdg-open'
 alias rsync='rsync -avh --info=progress2 --partial'
+alias ip='ip --color=auto'
 
 # Node version manager
 export NVM_DIR="$HOME/.nvm"
