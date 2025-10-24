@@ -13,6 +13,7 @@ alias venv='source .venv/bin/activate'
 alias open='xdg-open'
 alias rsync='rsync -avh --info=progress2 --partial'
 alias ip='ip --color=auto'
+alias rcloud='rclone mount icloud: ~/iCloud --vfs-cache-mode writes --daemon --log-file ~/.local/state/rclone/rclone.log --log-file-max-size 1M --log-file-max-backups 3 --log-format=date,time,pid'
 
 # Node version manager
 export NVM_DIR="$HOME/.nvm"
