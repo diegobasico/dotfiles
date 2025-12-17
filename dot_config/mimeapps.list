@@ -1,0 +1,36 @@
+[Default Applications]
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+text/plain=org.xfce.mousepad.desktop
+video/mp4=vlc.desktop
+image/png=userapp-ristretto-6DP482.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/chrome=zen.desktop
+text/html=firefox.desktop
+application/x-extension-htm=zen.desktop
+application/x-extension-html=zen.desktop
+application/x-extension-shtml=zen.desktop
+application/xhtml+xml=zen.desktop
+application/x-extension-xhtml=zen.desktop
+application/x-extension-xht=zen.desktop
+image/jpeg=org.xfce.ristretto.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
+
+[Added Associations]
+application/pdf=firefox.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
+text/plain=org.xfce.mousepad.desktop;
+application/x-shellscript=org.xfce.mousepad.desktop;
+video/mp4=firefox.desktop;vlc.desktop;
+image/png=org.xfce.ristretto.desktop;userapp-ristretto-6DP482.desktop;
+x-scheme-handler/http=zen.desktop;
+x-scheme-handler/https=zen.desktop;
+x-scheme-handler/chrome=zen.desktop;
+text/html=org.xfce.mousepad.desktop;org.xfce.ristretto.desktop;zen.desktop;
+application/x-extension-htm=zen.desktop;
+application/x-extension-html=zen.desktop;
+application/x-extension-shtml=zen.desktop;
+application/xhtml+xml=zen.desktop;
+application/x-extension-xhtml=zen.desktop;
+application/x-extension-xht=zen.desktop;
+image/jpeg=org.xfce.ristretto.desktop;
