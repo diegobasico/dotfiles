@@ -6,7 +6,7 @@ return {
     "mfussenegger/nvim-dap-python",
   },
   event = "VeryLazy",
-  branch = "regexp",
+  -- branch = "main",
   opts = {
     name = ".venv", -- optional: name of the venv to search for automatically
     auto_refresh = true,
