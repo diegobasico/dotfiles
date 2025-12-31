@@ -1,1 +1,11 @@
 theme = Everforest Dark Hard
+
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+l=goto_split:right
+keybind = ctrl+shift+h=goto_split:left
+
+keybind = ctrl+shift+alt+k=resize_split:up,10
+keybind = ctrl+shift+alt+j=resize_split:down,10
+keybind = ctrl+shift+alt+l=resize_split:right,10
+keybind = ctrl+shift+alt+h=resize_split:left,10
